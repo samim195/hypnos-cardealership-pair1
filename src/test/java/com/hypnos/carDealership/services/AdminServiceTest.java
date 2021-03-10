@@ -62,12 +62,12 @@ class AdminServiceTest {
         assertThat(httpStatus).isEqualTo(HttpStatus.OK);
     }
 
-    @Test
-    public void shouldRemoveCarFromDatabase() {
-        adminService.createCar(getDummyCar());
-        adminService.deleteCar(1L).getStatusCode();
-        assertThat(carRepository.findAll().size()).isEqualTo(0);
-    }
+//    @Test
+//    public void shouldRemoveCarFromDatabase() {
+//        adminService.createCar(getDummyCar());
+//        adminService.deleteCar(1L).getStatusCode();
+//        assertThat(carRepository.findAll().size()).isEqualTo(0);
+//    }
 
     @Test
     public void shouldReturnHttpStatusNotFoundWhenCarDoesNotExistInDatabase() {
